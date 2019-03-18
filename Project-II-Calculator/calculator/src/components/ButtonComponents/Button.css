@@ -6,7 +6,13 @@
     box-sizing: border-box;
     text-align: center;
     padding: 10px 0;
+    cursor: pointer;
 }
+
+.calculator .keypad .numbers div:active {
+    background-color: lightgrey;
+}
+
 .calculator .keypad .numbers .number-default {
     width: 33.33%;
 }
@@ -18,4 +24,8 @@
 .calculator .keypad .sidepanel .action-default {
     width: 100%;
     background-color: #a0001e;
+}
+
+.calculator .keypad .sidepanel div:active {
+    background-color: #A4335F;
 }
