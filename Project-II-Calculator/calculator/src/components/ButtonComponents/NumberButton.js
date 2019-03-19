@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-const NumberButton = (props) => {
-    return <div className={props.buttonStyle ? props.buttonStyle : "number-default"}
-                onClick={() => props.handleNumber(props.number)}>{props.number}</div>;
+const NumberButton = ({buttonStyle, handleNumber, number}) => {
+    return <div className={buttonStyle ? buttonStyle : "number-default"}
+                onClick={() => handleNumber(number)}>{number}</div>;
 };
 
 export default NumberButton;

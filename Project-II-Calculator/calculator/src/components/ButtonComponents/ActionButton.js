@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-const ActionButton = (props) => {
-    return <div className={props.buttonStyle ? props.buttonStyle : "action-default"}
-                onClick={() => props.handleAction(props.action)}>{props.text}</div>;
+const ActionButton = ({buttonStyle, handleAction, action, text}) => {
+    return <div className={buttonStyle ? buttonStyle : "action-default"}
+                onClick={() => handleAction(action)}>{text}</div>;
 };
 
 export default ActionButton;
