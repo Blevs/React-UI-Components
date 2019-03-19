@@ -10,14 +10,12 @@ class Calculator extends React.Component {
         this.state = { total: 0,
                        stack: false,
                        action: false };
-        this.handleNumber = this.handleNumber.bind(this);
-        this.handleAction = this.handleAction.bind(this);
     }
-    handleNumber(num) {
+    handleNumber = (num) => {
         this.setState({ total: (this.state.stack ? (10 * this.state.total + num) : num),
                         stack: (this.state.stack ? this.state.stack : this.state.total || num) });
     }
-    handleAction(action) {
+    handleAction = (action) => {
         if (action === true) { // '=' triggers stacked action
             this.setState({total: this.state.action
                            ? this.state.action(this.state.stack, this.state.total)
