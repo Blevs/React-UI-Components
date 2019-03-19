@@ -17,6 +17,10 @@
     width: 33.33%;
 }
 
+.calculator .keypad .numbers .number-half {
+    width: 50%;
+}
+
 .calculator .keypad .numbers .number-wide {
     width: 100%;
 }

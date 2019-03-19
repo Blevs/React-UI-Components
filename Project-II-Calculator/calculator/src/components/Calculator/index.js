@@ -11,7 +11,9 @@ class Calculator extends React.Component {
                        action: false };
     }
     handleNumber = (num) => {
-        this.setState({ total: (this.state.stack !== false ? (10 * this.state.total + num) : num),
+        this.setState({ total: ((this.state.stack === false || this.state.total.match(/^0+$/))
+                                ? num.toString()
+                                : this.state.total + num),
                         stack: (this.state.stack !== false
                                 ? this.state.stack
                                 : this.state.total || num) });
@@ -19,17 +21,17 @@ class Calculator extends React.Component {
     handleAction = (action) => {
         if (action === true) { // '=' triggers stacked action
             this.setState({total: this.state.action
-                           ? this.state.action(this.state.stack, this.state.total)
+                           ? this.state.action(Number(this.state.stack), Number(this.state.total))
                            : this.state.total,
                            stack: false,
                            action: false });
         } else if (action === false) { // 'clear' clears total and stacks
-            this.setState({ total: 0,
+            this.setState({ total: "0",
                             stack: false,
                             action: false });
         } else if (action) { // otherwise, stack action and total
             this.setState({ action: action,
-                            total: 0,
+                            total: "0",
                             stack: this.state.total });
         }
     }

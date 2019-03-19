@@ -14,7 +14,11 @@ const Numbers = ({handleAction, handleNumber}) => {
                                               handleNumber={handleNumber}/>)}
              <NumberButton key={0}
                            number={0}
-                           buttonStyle="number-wide"
+                           buttonStyle="number-half"
+                           handleNumber={handleNumber}/>
+             <NumberButton key={10}
+                           number="."
+                           buttonStyle="number-half"
                            handleNumber={handleNumber}/>
            </div>;
 };
