@@ -1,0 +1,19 @@
+.calculator .keypad {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.calculator .keypad .numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+
+.calculator .keypad .sidepanel {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
