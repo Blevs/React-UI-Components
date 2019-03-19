@@ -11,14 +11,12 @@ class Post extends React.Component {
                        reposts: props.reposts,
                        liked: props.liked,
                        likes: props.likes };
-        this.handleReposting = this.handleReposting.bind(this);
-        this.handleLiking = this.handleLiking.bind(this);
     }
-    handleReposting() {
+    handleReposting = () => {
         this.setState({ reposts: this.state.reposts + (this.state.reposted ? -1 : 1),
                         reposted: !this.state.reposted });
     }
-    handleLiking() {
+    handleLiking = () => {
         this.setState({ likes: this.state.likes + (this.state.liked ? -1 : 1),
                         liked: !this.state.liked });
     }
