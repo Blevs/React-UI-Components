@@ -3,11 +3,11 @@ import './Card.css';
 import CardBanner from './CardBanner.js';
 import CardContent from './CardContent.js';
 
-const CardContainer = (props) => {
+const CardContainer = ({url, img, title, content}) => {
     return <div className="post-card">
-             <a href={props.url}>
-               <CardBanner src={props.img} />
-               <CardContent title={props.title} content={props.content} url={props.url} />
+             <a href={url}>
+               <CardBanner src={img} />
+               <CardContent title={title} content={content} url={url} />
              </a>
            </div>;
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css';
 
-const CardBanner = (props) => {
+const CardBanner = ({src}) => {
     return <div className="post-card-img-container">
-             <img src={props.src} />
+             <img src={src} alt=""/>
            </div>;
 };
 

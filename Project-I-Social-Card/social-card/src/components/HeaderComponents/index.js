@@ -4,12 +4,12 @@ import ImageThumbnail from './ImageThumbnail.js';
 import HeaderTitle from './HeaderTitle.js';
 import HeaderContent from './HeaderContent.js';
 
-const HeaderContainer = (props) => {
+const HeaderContainer = ({img, name, username, date, content}) => {
     return <div className="post-header">
-             <ImageThumbnail src={props.img} />
+             <ImageThumbnail src={img} />
              <div className="post-header-copy">
-               <HeaderTitle name={props.name} username={props.username} date={props.date} />
-               <HeaderContent content={props.content} />
+               <HeaderTitle name={name} username={username} date={date} />
+               <HeaderContent content={content} />
              </div>
            </div>;
 };
