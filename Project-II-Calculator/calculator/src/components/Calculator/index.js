@@ -11,8 +11,10 @@ class Calculator extends React.Component {
                        action: false };
     }
     handleNumber = (num) => {
-        this.setState({ total: (this.state.stack ? (10 * this.state.total + num) : num),
-                        stack: (this.state.stack ? this.state.stack : this.state.total || num) });
+        this.setState({ total: (this.state.stack !== false ? (10 * this.state.total + num) : num),
+                        stack: (this.state.stack !== false
+                                ? this.state.stack
+                                : this.state.total || num) });
     }
     handleAction = (action) => {
         if (action === true) { // '=' triggers stacked action
