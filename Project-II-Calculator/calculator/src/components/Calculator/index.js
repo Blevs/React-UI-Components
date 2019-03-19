@@ -1,6 +1,5 @@
 import React from 'react';
 import './Calculator.css';
-import { NumberButton, ActionButton } from '../ButtonComponents';
 import { Keypad } from '../KeypadComponents';
 import Display from '../DisplayComponents';
 
